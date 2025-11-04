@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #040325;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: antiquewhite;
+}
+
+#contenedor-productos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.productos-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.productos-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.productos-card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.productos-card p {
+    font-size: 14px;
+    color: #08073a;
+}
+
+.productos-card button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #ff0037;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.productos-card button:hover {
+    background: #b34800;
+}
