@@ -35,7 +35,8 @@ function mostrarProductos() {
 
         // Construir la tarjeta del producto
         card.innerHTML = `
-            <img src="${producto.imagen}" alt="${producto.nombre}">
+            
+             <img src="${producto.imagen}" alt="${producto.nombre}" width="150">
             <h2>${producto.nombre}</h2>
             <p>${producto.descripcion}</p>
             <p><strong>Precio:</strong> $${producto.precio.toFixed(2)}</p>
@@ -49,3 +50,4 @@ function mostrarProductos() {
 
 // Llamar a la función para mostrar los productos
 mostrarProductos();
+
