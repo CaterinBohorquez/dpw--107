@@ -1,59 +1,80 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #040325;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 20px;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: antiquewhite;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-#contenedor-productos {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+/* Contenedor general con flexbox */
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.productos-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 15px;
-    width: 250px;
-    text-align: center;
+/* Cada tarjeta */
+.producto-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.productos-card img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 8px;
+.producto-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-.productos-card h2 {
-    margin: 10px 0;
-    font-size: 20px;
+/* Imagen del producto */
+.producto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.productos-card p {
-    font-size: 14px;
-    color: #08073a;
+/* Título y descripción */
+.producto-card h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 10px;
 }
 
-.productos-card button {
-    margin-top: 10px;
-    padding: 10px;
-    background: #ff0037;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.producto-card p {
+  color: #555;
+  font-size: 0.95em;
+  margin: 8px 0;
 }
 
-.productos-card button:hover {
-    background: #b34800;
+/* Precio */
+.producto-card span {
+  display: block;
+  font-weight: bold;
+  color: #008b4e;
+  margin-bottom: 10px;
+}
+
+/* Botón */
+.producto-card button {
+  background-color: #008b4e;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.producto-card button:hover {
+  background-color: #00a85a;
 }
