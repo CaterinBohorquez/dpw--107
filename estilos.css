@@ -12,7 +12,7 @@ h1 {
 }
 
 /* Contenedor general con flexbox */
-.contenedor-productos {
+#contenedor-productos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -78,3 +78,4 @@ h1 {
 .producto-card button:hover {
   background-color: #00a85a;
 }
+
