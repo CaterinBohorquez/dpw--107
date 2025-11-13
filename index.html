@@ -1,16 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">  
-</head>
-<body>
-    <h1>Nuestros Productos</h1>
-<div id="contenedor-productos" class="contenedor-productos"></div>
-    <script src="app.js"></script>
-</body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cursos de Inteligencia Artificial para Docentes | TPSG</title>
 
+  <!-- Estilos base -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #004aad, #00a1ff);
+      color: white;
+      padding: 10px 0;
+    }
+    #logo {
+      object-fit: contain;
+      opacity: 0.9;
+      border-radius: 8px;
+    }
+    .contenido-hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .contenido-hero h2 {
+      font-size: 2em;
+      color: #004aad;
+    }
+    .barra {
+      background-color: #eaf3ff;
+      padding: 20px 0;
+      text-align: center;
+      font-weight: 500;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .info-card h4 {
+      color: #004aad;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+    .footer {
+      background-color: #003b8e;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+    .footer a {
+      color: #fff;
+      display: block;
+      margin-bottom: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="six columns">
+          <img src="../PROYECTO-Carrito/img/banner.jfif" id="logo" width="120" alt="Logo IA Docentes">
+        </div>
+        <div class="six columns u-pull-right">
+          <ul>
+            <li class="submenu">
+              <img src="../PROYECTO-Carrito/img/intjem1.jfif" id="img-carrito" alt="Carrito de compras">
+              <div id="carrito">
+                <table id="lista-carrito" class="u-full-width">
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Curso</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="contenido-hero">
+        <h2>Formación Docente en Inteligencia Artificial</h2>
+        <p>Encuentra cursos adaptados a niveles Inicial, Primaria, Secundaria y Técnico Medio</p>
+        <form id="busqueda" class="formulario">
+          <input class="u-full-width" type="text" placeholder="¿Qué te gustaría aprender hoy?" id="buscador">
+          <input type="submit" id="submit-buscador" class="button-primary" value="Buscar">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <div class="barra">
+    <div class="container">
+      <div class="row">
+        <div class="four columns">Aprende IA desde cero con materiales accesibles</div>
+        <div class="four columns">Cursos diseñados para docentes de todos los niveles</div>
+        <div class="four columns">Certificación digital y acceso permanente</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LISTA DE CURSOS -->
+  <main id="lista-cursos" class="container">
+    <h4 class="encabezado">Cursos en Línea Disponibles</h4>
+    <div class="row">
+      <div class="four columns">
+        <div class="card">
+          <img src="../PROYECTO-Carrito/img/curso1.jpg" class="imagen-curso u-full-width" alt="Curso IA Básica">
+          <div class="info-card">
+            <h4>Introducción a la Inteligencia Artificial</h4>
+            <p>Para docentes de primaria</p>
+            <p class="precio">$120 <span class="u-pull-right">$10</span></p>
+            <a href="#" class="button-primary u-full-width agregar-carrito" data-id="1">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="four columns">
+        <div class="card">
+          <img src="../PROYECTO-Carrito/img/curso2.jpg" class="imagen-curso u-full-width" alt="Curso IA Aplicada">
+          <div class="info-card">
+            <h4>IA Aplicada al Aula</h4>
+            <p>Para secundaria y técnico medio</p>
+            <p class="precio">$150 <span class="u-pull-right">$12</span></p>
+            <a href="#" class="button-primary u-full-width agregar-carrito" data-id="2">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="four columns">
+        <div class="card">
+          <img src="../PROYECTO-Carrito/img/curso3.jpg" class="imagen-curso u-full-width" alt="Curso Robótica Educativa">
+          <div class="info-card">
+            <h4>Robótica Educativa con IA</h4>
+            <p>Para todos los niveles</p>
+            <p class="precio">$180 <span class="u-pull-right">$15</span></p>
+            <a href="#" class="button-primary u-full-width agregar-carrito" data-id="3">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="four columns">
+          <h5>Sobre Nosotros</h5>
+          <a href="#">Quiénes Somos</a>
+          <a href="#">Misión</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="four columns">
+          <h5>Ayuda</h5>
+          <a href="#">Preguntas Frecuentes</a>
+          <a href="#">Soporte Técnico</a>
+          <a href="#">Contáctanos</a>
+        </div>
+        <div class="four columns">
+          <h5>Conéctate</h5>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+          <a href="#">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2025 TPSG | Formación Docente en Inteligencia Artificial</p>
+  </footer>
+
+  <script src="js/carrito.js"></script>
+</body>
 </html>
